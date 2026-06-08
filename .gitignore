@@ -1,0 +1,13 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Third-party source materials (Nutravet PDFs & video transcripts).
+# Re-fetchable, copyrighted, and not needed at runtime (content is baked into docs/js/data.js).
+# Kept out of this public repo. Remove this line if you want them backed up here too.
+documentation/
+
+# Editor
+.vscode/
+*.log
