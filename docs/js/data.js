@@ -1,360 +1,288 @@
 /* ============================================================================
-   NutraTills, data layer (category-agnostic schema)
-   First category: DIGESTIVE (Nutrabio range)
-   Sources: documentation/datasheets + RANGE transcript (Emma, clinical advisor)
-   Content is DERIVED for sales-readiness, not veterinary advice.
+   NutraTills, sales-visit playbook data.
+   SCENARIO: Nutravet rep, first visit to an independent practice that stocks
+   YuMove, to introduce Nutraquin Chews. (Assessor role-play brief, 2026-06.)
+   Commercial terms are taken from the assessor's email (authoritative).
+   Competitor/channel facts are research-verified; content DERIVED for the pitch,
+   not veterinary advice.
    ============================================================================ */
 
-window.CATEGORY = {
-  id: "digestive",
-  name: "Digestive Health",
-  emoji: "🦴",
-  tagline: "The Nutrabio range, gut support, problem by problem.",
-  rangeStory:
-    "The Nutrabio digestive range is organised by the problem in front of you. For acute upsets you've got " +
-    "the Rapid Stool Support Chews (consumer, mild–moderate) and the Advanced Rapid Digestive Support Paste " +
-    "(vet-exclusive, mild–severe). For chronic/ongoing cases there's the Daily Digestive Support Powder " +
-    "(consumer) stepping up to the Advanced Daily Powder (vet-exclusive, postbiotic). Anal Gland Support " +
-    "covers fibre-led anal-gland cases.",
-  sharedEvidence: [
-    "Branded, evidence-backed actives: Calsporin (patented Bacillus velezensis), ProFeed (scFOS), Oralin (EC-licensed Enterococcus faecium), EpiCor (Cargill postbiotic).",
-    "Oralin is the only Enterococcus faecium strain with EC licence approval for dogs & cats.",
-    "Made in Britain, 'Backed by science, trusted by vets, loved by pets.'"
+window.BRIEF = {
+  title: "Nutraquin Chews, first sales visit",
+  scenario:
+    "You are a Nutravet Sales Representative visiting an independent veterinary practice for the first time " +
+    "to introduce Nutraquin Chews. The practice currently stocks YuMove but may be open to alternatives, " +
+    "because they're frustrated that owners buy YuMove online instead of from the practice.",
+  goal: "Run it like a real sales visit and earn a trial order, by solving their problem, not just pitching a product.",
+  winningStrategy:
+    "Their pain is not clinical, it's margin leakage: they recommend YuMove, the owner buys it cheaper on " +
+    "Amazon, and the practice loses the repeat dispensing revenue. Your clean, verifiable win is channel " +
+    "exclusivity: Nutravet sells ONLY through veterinary practices and authorised stockists, never Amazon or " +
+    "internet pharmacies. Stock Nutraquin Chews and the sale can't leak online, so the practice keeps the income.",
+  keyFacts: [
+    "Nutravet does NOT supply Amazon or internet pharmacies (vet-channel exclusive).",
+    "YuMove is sold on Amazon, Pets at Home, Sainsbury's and its own site with 50% / 20% subscription discounts.",
+    "Practice margin on Nutraquin Chews is about 41.7% on every pot, and it can't be undercut online.",
+    "Next working day delivery if ordered before 4pm; free shipping over £100.",
+    "Support materials: product brochures + mobility score cards (recommendation tools)."
   ]
 };
 
-/* -------- Problem groups: the problem-led spine from the range video -------- */
-window.PROBLEM_GROUPS = [
+/* ------------------------------- The product ------------------------------ */
+window.PRODUCT = {
+  name: "Nutraquin Chews",
+  tagline: "Tasty daily chews for joints, mobility & structural support",
+  species: "Dogs",
+  form: "Soft chew (3g), hydrolysed chicken-liver flavour",
+  onset: "Noticeable on average within ~1 week (present as a claim).",
+  sizes: [
+    { size: "50s pot", practice: "£20.41", rrp: "£34.99" },
+    { size: "100s pot", practice: "£34.99", rrp: "£59.99" }
+  ],
+  whatItDoes: [
+    "Daily support for joint & mobility health",
+    "Aids joint structure, tendons & cartilage",
+    "Soothes & comforts stiff joints",
+    "Tasty formula built for easy administration & compliance"
+  ],
+  benefits: [
+    ["Palatability = compliance", "A hydrolysed chicken-liver chew dogs actually take, so owners keep giving it."],
+    ["Structural support", "Egg shell membrane delivers multiple joint nutrients from one source."],
+    ["Natural anti-inflammatory angle", "Standardised-AKBA boswellia supports the natural systems that control inflammation."],
+    ["Gut-joint axis", "Pre & postbiotics support absorption of joint nutrients, a point of difference."]
+  ],
+  ingredients: [
+    { name: "Egg shell membrane (175mg)", cls: "Structural multi-nutrient", detail: "Naturally contains collagen, hyaluronic acid, glucosamine, chondroitin and ~400 proteins. 20+ studies. Supports cartilage & tendons." },
+    { name: "Boswellia extract (50mg)", cls: "Natural anti-inflammatory", detail: "Standardised Acetyl-11-keto-boswellic acid (AKBA), the active fraction. 400+ trials behind boswellia." },
+    { name: "Omega-3 (142.5mg; EPA 70 / DHA 47.5)", cls: "Essential fatty acids", detail: "High-purity refined fish oil. Supports natural anti-inflammatory systems and blood flow to the joints." },
+    { name: "Pre & postbiotics (hydrolysed yeast)", cls: "Gut-joint axis", detail: "Supports a healthier gut to improve absorption of joint nutrients." }
+  ],
+  dosing: {
+    note: "Daily chew, by bodyweight. No loading phase.",
+    rows: [
+      ["Small dog", "0 to 9.99kg", "0.5 chew/day"],
+      ["Medium / large dog", "10 to 29.99kg", "1 chew/day"],
+      ["Large dog", "30kg+", "2 chews/day"]
+    ]
+  },
+  honestFraming: [
+    "Different formulation to YuMove (egg shell membrane + boswellia + omega-3), NOT high-dose glucosamine/GLM. Frame as a different mechanism, not 'more glucosamine'.",
+    "The ~1 week onset is a claim; YuMove's 6-week figure is the more formally published (RVC trial).",
+    "Lead with channel + margin + compliance, then support with the natural formula. Don't out-science the No.1 brand."
+  ]
+};
+
+/* ------------------------------ The commercials --------------------------- */
+window.COMMERCIALS = {
+  margins: [
+    { size: "50s pot", practice: "£20.41", rrp: "£34.99", profit: "£14.58", margin: "41.7%" },
+    { size: "100s pot", practice: "£34.99", rrp: "£59.99", profit: "£25.00", margin: "41.7%" }
+  ],
+  marginLine: "About 41.7% margin on every pot (~71% markup on cost), and you keep all of it because it can't be undercut online.",
+  delivery: "Next working day delivery when ordered before 4pm.",
+  freeShipping: "Free shipping on orders over £100.",
+  discountTiers: [
+    ["Over £250", "10% discount"],
+    ["Over £500", "15% discount"],
+    ["Over £750", "20% discount"]
+  ],
+  supportMaterials: [
+    ["Product brochures", "Hand to owners to support the recommendation at the point of sale."],
+    ["Mobility score cards", "A tool for the team to identify mobility candidates and start owner conversations, which drives in-practice recommendations (and sales)."]
+  ],
+  useInPitch: [
+    "Turn margin into a sentence: 'You make around £14.58 a pot on the 50s and £25 on the 100s, and none of it leaks online.'",
+    "Lower the commitment: 'An opening order of just five pots clears the £100 free-shipping threshold.'",
+    "Use the tiers to grow the order: 'If you take a starter range across sizes you're close to the £250 / 10% tier.'",
+    "Position the mobility score cards as a recommendation engine, not a freebie."
+  ]
+};
+
+/* ------------------------------ The competitor ---------------------------- */
+window.COMPETITOR = {
+  name: "YuMove (Lintbells)",
+  respect: [
+    "Genuinely the UK's No.1 vet-recommended joint supplement brand (Kynetec 2025, 84% of vets).",
+    "Hero ingredient: ActivEase Green Lipped Mussel; also glucosamine, hyaluronic acid, manganese, vitamins.",
+    "Marketed as scientifically proven in 6 weeks (double-blind, placebo-controlled; RVC-linked trial)."
+  ],
+  leakage: [
+    "Sold on Amazon UK, Pets at Home, Sainsbury's, eBay and third-party online retailers.",
+    "Its own site offers 50% off the first 2 months and 20% off ongoing via Subscribe & Save, plus multibuy deals.",
+    "So a practice selling YuMove at RRP simply cannot compete with the online price, which is why owners buy online."
+  ],
+  counter: [
+    "Nutravet sells ONLY through veterinary practices and authorised stockists.",
+    "It does NOT supply Amazon or internet pharmacies, so there's no online channel undercutting your shelf price.",
+    "Stock Nutraquin Chews and the recommendation converts to a sale that stays in your practice."
+  ],
+  compare: [
+    { axis: "Channel", nutra: "Vet practices / authorised stockists only", yumove: "Amazon, supermarkets, Pets at Home, D2C subscriptions" },
+    { axis: "Online undercut", nutra: "None, not supplied to online discounters", yumove: "Routinely discounted 20 to 50% online" },
+    { axis: "Lead actives", nutra: "Egg shell membrane + boswellia (AKBA) + omega-3", yumove: "Green Lipped Mussel (ActivEase) + glucosamine" },
+    { axis: "Format", nutra: "Soft chew, chicken-liver flavour", yumove: "Tablets, Tasty Tablets, Daily Bites" },
+    { axis: "Onset claim", nutra: "~1 week (claim)", yumove: "6 weeks (RVC trial)" },
+    { axis: "Practice revenue", nutra: "Protected, sale stays in practice", yumove: "Leaks to online channels" }
+  ],
+  guardrails: [
+    "Do NOT claim a formally-named 'margin-protection policy'. Say: 'They don't supply Amazon or internet pharmacies, so nothing undercuts your shelf price.'",
+    "Do NOT claim Nutraquin Chews are 'stronger' or have 'more glucosamine' than YuMove. Different formulation, frame as a different mechanism.",
+    "Do NOT trash YuMove, it's the No.1 vet-recommended brand. Respect it, then pivot to channel + margin.",
+    "Treat the ~1 week onset as a claim, not a published head-to-head result."
+  ]
+};
+
+/* ------------------------------- The visit -------------------------------- */
+/* The call structure: Open -> Discover -> Pitch -> Handle -> Close */
+window.VISIT = [
   {
-    id: "acute",
-    name: "Acute diarrhoea",
-    blurb: "Short-term upsets. Two options split by severity and channel.",
-    scenario: "A patient presents with sudden, short-term acute diarrhoea. What do you reach for?",
-    productIds: ["rapid-stool-chews", "advanced-rapid-paste"],
-    comparison: {
-      caption: "Chews vs Paste, same problem, different positioning.",
-      axes: [
-        { label: "Channel", values: { "rapid-stool-chews": "Consumer", "advanced-rapid-paste": "Vet-practice exclusive" } },
-        { label: "Severity", values: { "rapid-stool-chews": "Mild → moderate", "advanced-rapid-paste": "Mild → severe" } },
-        { label: "Probiotic", values: { "rapid-stool-chews": "Bacillus velezensis (Calsporin)", "advanced-rapid-paste": "Enterococcus faecium (4bn CFU/notch)" } },
-        { label: "Clay / adsorbent", values: { "rapid-stool-chews": "Montmorillonite (high content)", "advanced-rapid-paste": "Kaolin (low, no constipation risk)" } },
-        { label: "Best for", values: { "rapid-stool-chews": "Fit-in-themselves, occasional loose stools, chew-takers", "advanced-rapid-paste": "More severe; elderly cats that flip-flop diarrhoea↔constipation" } },
-        { label: "Price/day", values: { "rapid-stool-chews": "£5.33 (3-day pack)", "advanced-rapid-paste": "Day 1 £6.15, Day 2+ £4.10 (20kg dog)" } }
-      ]
-    }
+    stage: "1. Open",
+    purpose: "Introduce yourself and Nutravet, build rapport, earn permission for a few minutes.",
+    say: [
+      "Introduce yourself, Nutravet, and that it's your first visit.",
+      "Be warm and concise; respect their time. Ask for a few minutes.",
+      "Signal you're here to help with a problem, not just sell a box."
+    ],
+    ask: [
+      "'Is now an ok moment for a quick introduction?'",
+      "'How familiar are you already with Nutravet?'"
+    ]
   },
   {
-    id: "chronic",
-    name: "Chronic diarrhoea",
-    blurb: "Ongoing / niggly gut. Daily powder, stepping up to the Advanced postbiotic powder.",
-    scenario: "A patient presents with chronic, ongoing or recurring, digestive upset. What's your plan?",
-    productIds: ["daily-powder", "advanced-daily-powder"],
-    comparison: {
-      caption: "Daily vs Advanced powder, when to step up.",
-      axes: [
-        { label: "Channel", values: { "daily-powder": "Consumer", "advanced-daily-powder": "Vet-practice exclusive" } },
-        { label: "Severity", values: { "daily-powder": "Mild → moderate", "advanced-daily-powder": "Mild → severe" } },
-        { label: "Biotics", values: { "daily-powder": "Pre + probiotic", "advanced-daily-powder": "Pre + POSTbiotic (EpiCor)" } },
-        { label: "B vitamins", values: { "daily-powder": "B12", "advanced-daily-powder": "B12 + B9 (folic acid)" } },
-        { label: "Immunocompromised", values: { "daily-powder": "Live probiotic", "advanced-daily-powder": "Safe, no live microbes needed" } },
-        { label: "Price/day", values: { "daily-powder": "97p (20kg dog)", "advanced-daily-powder": "£1.33" } }
-      ]
-    }
+    stage: "2. Discover",
+    purpose: "Surface the YuMove frustration in their own words before you pitch. Listen more than you talk.",
+    say: [
+      "Acknowledge they already do joint care well with YuMove.",
+      "Probe the online-leakage pain so THEY say it out loud."
+    ],
+    ask: [
+      "'How are you finding YuMove with your clients at the moment?'",
+      "'When you recommend a joint supplement, how often do you think the owner buys it from you versus online?'",
+      "'How much does that lost dispensing revenue matter to the practice?'",
+      "'What would make you consider stocking a second option?'"
+    ]
   },
   {
-    id: "anal-gland",
-    name: "Anal gland support",
-    blurb: "Fibre-led support for stool quality & normal anal gland expression.",
-    scenario: "A patient presents with recurrent anal gland problems tied to poor stool quality.",
-    productIds: ["anal-gland"],
-    comparison: null
+    stage: "3. Pitch",
+    purpose: "Bridge from their pain to Nutraquin Chews. Lead with channel + margin, support with the product.",
+    say: [
+      "Bridge: 'That online leakage is exactly the problem Nutraquin solves.'",
+      "Channel: Nutravet doesn't supply Amazon or internet pharmacies, so the sale stays with you.",
+      "Margin: ~41.7% on every pot, and none of it leaks online.",
+      "Product: a palatable daily chew (egg shell membrane + boswellia + omega-3) that drives compliance.",
+      "Support: brochures + mobility score cards to drive recommendations; next-day delivery before 4pm."
+    ],
+    ask: [
+      "'Does protecting that dispensing income sound useful to you?'",
+      "'Would a palatable chew help with the fussy dogs you struggle to dose?'"
+    ]
+  },
+  {
+    stage: "4. Handle",
+    purpose: "Meet objections calmly. Respect YuMove, re-anchor on channel, margin and compliance.",
+    say: [
+      "Don't argue clinically against the No.1 brand; position Nutraquin as the option owners can't buy cheaper online.",
+      "Use honest framing; never overclaim (see guardrails).",
+      "See the Objections section for the full bank."
+    ],
+    ask: [
+      "'If the clinical outcome is comparable, would keeping the sale in-practice tip it for you?'"
+    ]
+  },
+  {
+    stage: "5. Close",
+    purpose: "Ask for a small, easy commitment, a trial order, and agree next steps.",
+    say: [
+      "Make it low-risk: suggest a trial of a pot of each size.",
+      "Reduce friction: 'Five pots clears free shipping, and it's next-day if you order before 4pm.'",
+      "Leave the mobility score cards so the team can start identifying candidates this week.",
+      "Agree a follow-up to review how it's going."
+    ],
+    ask: [
+      "'Shall we start with a trial, a pot of each size, on next-day delivery?'",
+      "'Can I check back in a couple of weeks to see how the team are finding it?'"
+    ]
   }
 ];
 
-/* ------------------------------- Products --------------------------------- */
-window.PRODUCTS = [
-  {
-    id: "rapid-stool-chews",
-    name: "Nutrabio Rapid Stool Support Chews",
-    short: "Rapid Stool Chews",
-    subBrand: "nutrabio",
-    species: ["Dogs"],
-    format: "Chew (2.5g / 3.75g)",
-    formShort: "Chewable",
-    doseBullet: "Dosing: 1 chew twice daily for 3 days, then see a vet if no improvement.",
-    channel: "Consumer",
-    legacy: false,
-    positioning: "A triple-action digestive chew that helps maintain healthy digestion, normal stool consistency and a balanced gut microbiome, short-term support for acute upsets.",
-    whatItDoes: ["Firms loose stools", "Binds toxins & intestinal irritants", "Aids overall digestive function"],
-    benefits: [
-      ["High clay content", "Montmorillonite clay drives stool firmness."],
-      ["Probiotic support", "Spore-forming probiotic that survives manufacture."],
-      ["Highly palatable", "Tasty chew, easy to administer."],
-      ["Easy administration", "No syringes or pastes."]
-    ],
-    keyIngredients: ["Montmorillonite clay", "Activated charcoal", "Bacillus velezensis (Calsporin)", "Inulin", "Beta-glucans"],
-    ingredientDeepDive: [
-      { name: "Montmorillonite clay", cls: "Adsorbent clay", mechanism: "Natural adsorbent, binds excess moisture, toxins and unwanted substances in the gut.", benefit: "Key driver of stool firmness." },
-      { name: "Activated charcoal (coconut)", cls: "Adsorbent", mechanism: "Highly porous surface absorbs gas molecules and toxins, preventing the body absorbing them.", benefit: "Reduces flatulence and helps bloating." },
-      { name: "Bacillus velezensis (Calsporin)", cls: "Probiotic (spore-forming)", mechanism: "Live bacteria that stabilises gut flora; spore-former chosen specifically because it survives chew manufacture and stays live.", benefit: "Stable, live probiotic in a chew.", hook: "Calsporin is a patented strain, additional supporting data & research behind it." },
-      { name: "Prebiotics, inulin (chicory) + beta-glucans (yeast)", cls: "Prebiotic", mechanism: "Restore the gut environment and feed the probiotics.", benefit: "Supports overall microbiome health." }
-    ],
-    quantified: { unitLabel: "per 2.5g / 3.75g chew", rows: [
-      ["Montmorillonite clay", "1.03g / 1.55g"], ["Inulin", "26mg / 39mg"], ["Chia seed", "26mg / 39mg"],
-      ["Activated charcoal", "26mg / 39mg"], ["Vitamin C", "26mg / 39mg"], ["Hydrolysed yeast", "11mg / 16.5mg"],
-      ["Vitamin D", "200iu / 300iu"], ["Bacillus velezensis", "6×10⁸ / 9×10⁸ CFU"]
-    ]},
-    dosing: { note: "1 chew twice daily for 3 days. If no improvement after 3 days, seek veterinary advice (do not continue).", rows: [
-      ["Under 25kg", "", "2 × 2.5g chews/day"], ["Over 25kg", "", "2 × 3.75g chews/day"]
-    ]},
-    pricePerDay: "£5.33 (3-day pack)",
-    evidence: ["Calsporin patented probiotic"]
-  },
-
-  {
-    id: "advanced-rapid-paste",
-    name: "Nutrabio Advanced Rapid Digestive Support Paste",
-    short: "Advanced Rapid Paste",
-    subBrand: "nutrabio advanced",
-    species: ["Dogs", "Cats"],
-    format: "Oral paste (20ml)",
-    formShort: "Oral paste",
-    doseBullet: "Dosing: a loading dose on day 1, then daily maintenance.",
-    channel: "Vet-practice exclusive",
-    legacy: false,
-    positioning: "A high-strength, palatable oral paste that naturally corrects gut microflora to quickly and effectively resolve the root cause of acute diarrhoea.",
-    whatItDoes: ["Firms loose stools", "Aids digestive function", "Soothes an irritated / inflamed gut lining"],
-    benefits: [
-      ["Very high strength", "4 billion CFU per 2ml notch."],
-      ["Pre & probiotic support", "Boosts good flora, blocks bad."],
-      ["Highly palatable", "Easy syringe administration."]
-    ],
-    keyIngredients: ["Enterococcus faecium", "FOS", "MOS", "Sweet basil extract", "Kaolin"],
-    ingredientDeepDive: [
-      { name: "Enterococcus faecium", cls: "Probiotic (high strength)", mechanism: "4 billion CFU per 2ml notch, boosts and supports positive gut flora.", benefit: "Particularly effective against acute diarrhoea from infection, dietary indiscretion and stress." },
-      { name: "Prebiotics, FOS & MOS", cls: "Prebiotic", mechanism: "Increase beneficial bacteria while blocking bad bacteria from attaching to the gut wall.", benefit: "Healthier microbiome environment." },
-      { name: "Kaolin (low levels)", cls: "Adsorbent", mechanism: "Binds toxins and absorbs some excess moisture, kept low to avoid over-binding.", benefit: "Firms stools with reduced constipation risk; helps suppress E. coli, salmonella & pseudomonas." },
-      { name: "Sweet basil extract", cls: "Botanical", mechanism: "Normalises gut motility and facilitates natural absorption of excess moisture.", benefit: "Works with kaolin to form stools without over-binding." }
-    ],
-    quantified: { unitLabel: "composition", rows: [
-      ["Enterococcus faecium", "DSM 10663 / NCIMB 10415 (4b1707), 2×10¹² CFU/kg"],
-      ["Kaolin clay", "100g/kg"], ["Prebiotics", "FOS + MOS"],
-      ["Other", "Sunflower & canola oil, sweet basil extract, yeast extract"]
-    ]},
-    dosing: { note: "Loading dose Day 1, then maintenance Days 2+. (1 notch = 2ml.)", rows: [
-      ["Cats / Small dog", "0–9.99kg", "4ml (2 notch) → 2ml"],
-      ["Medium dog", "10–24.99kg", "6ml (3 notch) → 4ml"],
-      ["Large dog", "25–49.99kg", "8ml (4 notch) → 4ml"],
-      ["Large dog", "50kg+", "10ml (5 notch) → 6ml"]
-    ]},
-    pricePerDay: "Day 1 £6.15, Day 2+ £4.10 (20kg dog)",
-    evidence: ["High-CFU Enterococcus faecium", "Vet-exclusive positioning"]
-  },
-
-  {
-    id: "daily-powder",
-    name: "Nutrabio Daily Digestive Support Powder",
-    short: "Daily Powder",
-    subBrand: "nutrabio",
-    species: ["Dogs", "Cats"],
-    format: "Powder sachet (1g)",
-    formShort: "Powder sachet",
-    doseBullet: "Dosing: 1 sachet daily, suitable for any bodyweight.",
-    channel: "Consumer",
-    legacy: false,
-    positioning: "A gentle daily supplement supporting healthy digestion through prebiotics, probiotics and yeast-derived gut support, rebuilds gut balance, optimises stool and promotes immunity & vitality.",
-    whatItDoes: ["Aids digestive function", "Optimises stool consistency", "Supports immunity & vitality"],
-    benefits: [
-      ["2 billion CFU probiotics", "High probiotic level per sachet."],
-      ["Added prebiotics & B12", "ProFeed prebiotic + vitamin B12."],
-      ["Highly palatable", "Added palatant, very tasty, easy mixing."]
-    ],
-    keyIngredients: ["ProFeed (scFOS prebiotic)", "Oralin / Enterococcus faecium", "Vitamin B12"],
-    ingredientDeepDive: [
-      { name: "ProFeed (prebiotic, scFOS)", cls: "Prebiotic (branded)", mechanism: "Short-chain fructo-oligosaccharides nourish beneficial gut bacteria and optimise GI function.", benefit: "Supports microbiome balance and digestive comfort.", hook: "ProFeed is a branded prebiotic, additional research & data behind it." },
-      { name: "Oralin / Enterococcus faecium", cls: "Probiotic (branded)", mechanism: "Found naturally in the gut; boosting it rebalances the microbiome. 2 billion CFU/sachet, micro-encapsulated to pass safely through the digestive tract.", benefit: "Normalises gut microbiota and supports immunity.", hook: "Only Enterococcus faecium strain with EC licence approval for dogs & cats." },
-      { name: "Vitamin B12", cls: "Vitamin", mechanism: "Supports nervous-system health, metabolic energy and red-blood-cell production.", benefit: "Replaces B12 that drops with long-term gut issues / poor absorption." }
-    ],
-    quantified: { unitLabel: "per 1g sachet", rows: [
-      ["Hydrolysed yeast (inc prebiotics)", "715mg"], ["Enterococcus faecium", "2×10⁹ CFU"], ["Vitamin B12", "0.25mg"]
-    ]},
-    dosing: { note: "One-size daily dosing, sprinkle onto/into food; can split over meals.", rows: [
-      ["All weights", "", "1 sachet/day"]
-    ]},
-    pricePerDay: "97p (20kg dog)",
-    evidence: ["ProFeed branded prebiotic", "Oralin, EC-licensed strain"]
-  },
-
-  {
-    id: "advanced-daily-powder",
-    name: "Nutrabio Advanced Daily Digestive Support Powder",
-    short: "Advanced Daily Powder",
-    subBrand: "nutrabio advanced",
-    species: ["Dogs", "Cats"],
-    format: "Powder sachet (1g / 3g / 4.5g)",
-    formShort: "Powder sachet",
-    doseBullet: "Dosing: 1 weight specific sachet daily.",
-    channel: "Vet-practice exclusive",
-    legacy: false,
-    positioning: "Triple-action gut support, ready-to-use postbiotic compounds plus prebiotic support and essential B vitamins. Ideal for ongoing digestive sensitivity.",
-    whatItDoes: ["Aids digestion & immunity", "Maintains the gut microbiome", "Supplements B12 & B9 deficiencies"],
-    benefits: [
-      ["Evidence-based pre & postbiotics", "FOS/MOS + EpiCor postbiotic."],
-      ["High cyanocobalamin (B12)", "Plus folic acid (B9)."],
-      ["Highly palatable", "Tasty, easy-to-mix powder."]
-    ],
-    keyIngredients: ["FOS & MOS prebiotics", "EpiCor postbiotic", "Vitamin B12", "Folic acid (B9)"],
-    ingredientDeepDive: [
-      { name: "Prebiotics, FOS & MOS", cls: "Prebiotic", mechanism: "Feed good bacteria and block harmful pathogens from attaching to the gut lining.", benefit: "Microbiome balance." },
-      { name: "EpiCor (postbiotic)", cls: "Postbiotic", mechanism: "Yeast-derived (Saccharomyces cerevisiae) bioactive fermentation metabolites, support immune function and gut health WITHOUT containing live microbes.", benefit: "Safe option for severely immunocompromised patients where live probiotics may be unwise.", hook: "EpiCor is a registered trademark (Cargill), branded, evidence-backed postbiotic." },
-      { name: "Vitamin B12 (cyanocobalamin)", cls: "Vitamin", mechanism: "Red-blood-cell formation, neurological function and energy metabolism.", benefit: "High levels for pets with absorption issues." },
-      { name: "Folic acid (B9)", cls: "Vitamin", mechanism: "Supports cell growth and metabolic function.", benefit: "Works with B12 to support GI health." }
-    ],
-    quantified: { unitLabel: "per 1g / 3g / 4.5g sachet", rows: [
-      ["Hydrolysed yeast", "915mg / 2,745mg / 4,115mg"], ["EpiCor", "70mg / 210mg / 315mg"],
-      ["Vitamin B12", "0.5mg / 1.5mg / 2.25mg"], ["Vitamin E", "1mg / 3mg / 4.5mg"], ["Folic acid", "0.2mg / 0.6mg / 0.9mg"]
-    ]},
-    dosing: { note: "Weight-specific sachets, sprinkle onto/into food; can split over meals.", rows: [
-      ["Under 10kg", "", "1 × 1g sachet"], ["10–30kg", "", "1 × 3g sachet"], ["30kg+", "", "1 × 4.5g sachet"]
-    ]},
-    pricePerDay: "£1.33 (20kg dog)",
-    evidence: ["EpiCor (Cargill) postbiotic", "Vet-exclusive positioning"]
-  },
-
-  {
-    id: "anal-gland",
-    name: "Nutrabio Anal Gland Support",
-    short: "Anal Gland Support",
-    subBrand: "nutrabio",
-    aka: "formerly Nutrafiber",
-    species: ["Dogs"],
-    format: "Pellets (10g scoop)",
-    formShort: "Pellets",
-    doseBullet: "Dosing: 0.5 to 3 scoops daily depending on bodyweight.",
-    channel: "Consumer",
-    legacy: false,
-    positioning: "A high-fibre supplement with added pre & probiotics to support healthy digestion, stool quality and regular bowel movements, and normal anal gland function, especially on low-fibre or high-meat diets.",
-    whatItDoes: ["Encourages normal bowel movements", "Optimises stool consistency (firms loose AND softens hard)", "Aids long-term gut health"],
-    benefits: [
-      ["High fibre", "Soluble + insoluble fibre blend."],
-      ["Prebiotics & probiotics", "Comprehensive microbiome support."],
-      ["Palatable", "Eaten in food or as a treat."]
-    ],
-    keyIngredients: ["Dried apple", "Sugar beet pulp", "Psyllium husk", "Hydrolysed fish protein", "Bacillus velezensis (Calsporin)", "Inulin"],
-    ingredientDeepDive: [
-      { name: "Dried apple & sugar beet pulp", cls: "Soluble + insoluble fibre", mechanism: "Excellent sources of both fibre types; absorb excess water in the intestines.", benefit: "Normalise faecal consistency, important for emptying anal glands." },
-      { name: "Psyllium husk", cls: "Soluble fibre (high water-binding)", mechanism: "Increases faecal bulk and forms a lubricating gel around the faeces.", benefit: "Bulk without constipation; encourages normal anal gland expression." },
-      { name: "Hydrolysed fish protein", cls: "Peptides", mechanism: "Provides peptides (e.g. gastrins) that help maintain a healthy gut in food-sensitive animals.", benefit: "Gut support + high palatability." },
-      { name: "Bacillus velezensis (Calsporin) + inulin/yeast", cls: "Probiotic + prebiotic", mechanism: "Live bacteria (survives manufacture into pellets) plus prebiotic fibre rebalance the gut environment.", benefit: "Comprehensive microbiome support for problem anal-gland cases." }
-    ],
-    quantified: { unitLabel: "per 10g scoop", rows: [
-      ["Dried apple", "5,000mg"], ["Sugar beet pulp", "2,750mg"], ["Psyllium husk (99%)", "1,000mg"],
-      ["Hydrolysed fish protein", "500mg"], ["Yeast extract", "500mg"], ["Inulin", "162mg"], ["Bacillus velezensis (C-3102)", "2×10⁸ CFU"]
-    ]},
-    dosing: { note: "1 rounded scoop = 10g.", rows: [
-      ["0–10kg", "", "0.5 scoop/day"], ["10–25kg", "", "1 scoop/day"], ["25–40kg", "", "2 scoops/day"], ["40kg+", "", "3 scoops/day"]
-    ]},
-    pricePerDay: null,
-    evidence: ["Calsporin probiotic", "Vet/RVN testimonials on faecal-score improvement"]
-  }
-];
-
-/* ------------------------- DEFEND: objection bank -------------------------- */
-/* Derived from the range video's comparison sections + sales reasoning.
-   (Digestive has no singular FAQ video yet, graceful degradation per plan.md.) */
+/* ------------------------------ Objections -------------------------------- */
 window.OBJECTIONS = [
-  { id: "ob1", tag: "Differentiation",
-    q: "\"Why would I stock both the chews and the paste, aren't they the same?\"",
-    a: ["Same problem (acute diarrhoea), different positioning.",
-        "Chews: consumer, mild→moderate, Bacillus velezensis, high montmorillonite clay, for fit-in-themselves dogs or occasional loose stools.",
-        "Paste: vet-exclusive, mild→severe, high-strength Enterococcus faecium, low kaolin (no constipation risk).",
-        "So you reach for the paste on the more severe cases coming through the practice."] },
-  { id: "ob2", tag: "Differentiation",
-    q: "\"What's the difference between the Daily and the Advanced powder?\"",
-    a: ["Daily = pre + probiotic, B12, consumer, mild→moderate.",
-        "Advanced = pre + POSTbiotic (EpiCor), B12 + B9, vet-exclusive, mild→severe.",
-        "The postbiotic is the headline: it supports the gut WITHOUT live microbes, so it's a safe option in severely immunocompromised patients where a live probiotic may be unwise."] },
-  { id: "ob4", tag: "Science",
-    q: "\"What even is a postbiotic, and why put one in?\"",
-    a: ["EpiCor is a yeast-derived (Saccharomyces cerevisiae) postbiotic, the bioactive metabolites from fermentation.",
-        "It directly supports immune function, gut health and resilience without relying on live bacteria.",
-        "That's exactly why it's valuable for immunocompromised patients you still need to get GI-stable."] },
-  { id: "ob5", tag: "Price",
-    q: "\"The chews are £5.33 a day, that's pricey.\"",
-    a: ["It's a 3-day pack for short-term acute support, not an ongoing cost.",
-        "For that you get high clay content, activated charcoal toxin-binding and a live probiotic.",
-        "If it isn't resolving in 3 days the advice is to see a vet anyway, so it's a bounded, low-total spend."] },
-  { id: "ob6", tag: "Science",
-    q: "\"Why montmorillonite in the chews but kaolin in the paste?\"",
-    a: ["Montmorillonite is a high-adsorbency clay, great for firming, used at high content in the chews.",
-        "Kaolin is used at LOW levels in the paste specifically to avoid over-binding and constipation risk.",
-        "Plus the paste's sweet basil normalises motility, so it firms without tipping a patient into constipation (handy for elderly cats that flip-flop)."] },
-  { id: "ob7", tag: "Suitability",
-    q: "\"Can I use these in cats?\"",
-    a: ["Cats & dogs: the Paste, Daily Powder and Advanced Daily Powder.",
-        "Dogs only: the Rapid Stool Support Chews and Anal Gland Support.",
-        "So for a cat with an acute upset, reach for the Paste, not the chews."] },
-  { id: "ob8", tag: "Clinical fit",
-    q: "\"A dog keeps having recurrent anal gland issues on a high-meat, low-fibre diet.\"",
-    a: ["Anal Gland Support, a fibre-led formula built for exactly this.",
-        "Psyllium husk + dried apple + sugar beet pulp give bulk plus a lubricating gel → normal anal gland expression without constipation.",
-        "Plus Calsporin probiotic and prebiotic fibre for long-term gut health."] },
-  { id: "ob9", tag: "Science",
-    q: "\"Will the probiotic actually survive, being made into a chew, or the stomach?\"",
-    a: ["Chews use Bacillus velezensis (Calsporin) precisely because the spore-former survives manufacture and stays live.",
-        "The Daily Powder's Enterococcus faecium is micro-encapsulated to pass safely through the digestive tract.",
-        "The Paste's high-CFU Enterococcus faecium is delivered at strength to colonise the lower gut."] },
-  { id: "ob10", tag: "Evidence",
-    q: "\"How is any of this evidence-based?\"",
-    a: ["The actives are branded, data-backed ingredients: Calsporin (patented), ProFeed (scFOS), Oralin and EpiCor (Cargill).",
-        "Oralin is the only Enterococcus faecium strain with EC licence approval for dogs & cats.",
-        "That's the 'backed by science' story you can stand behind in front of a vet."] }
+  { tag: "Loyalty", q: "\"We already use YuMove and we're happy with it.\"",
+    a: ["Great, it's a strong product and clearly working clinically, I'm not asking you to drop it.",
+        "The issue you raised is that owners buy it online, so you recommend it but lose the sale.",
+        "Nutraquin gives you a joint recommendation that can't leak online, because Nutravet doesn't supply Amazon or internet pharmacies.",
+        "Think of it as protecting the revenue on the recommendations you're already making."] },
+  { tag: "Client demand", q: "\"Our clients ask for YuMove by name.\"",
+    a: ["Understandable, it's the No.1 vet-recommended brand and brilliantly marketed.",
+        "But the clients asking by name are often the ones buying it cheaper online afterwards.",
+        "When the practice actively recommends Nutraquin as your first-line chew, owners follow your lead, and that sale stays with you.",
+        "The mobility score cards help the team start that conversation consistently."] },
+  { tag: "Effort / change", q: "\"Switching is hassle, why change what works?\"",
+    a: ["You don't have to switch, you can add it as your protected-margin first-line chew.",
+        "Ordering is simple: next working day before 4pm, free shipping over £100.",
+        "A trial of a pot of each size is a tiny, low-risk first step.",
+        "I'll set it up and leave the support materials so there's nothing for your team to figure out."] },
+  { tag: "Clinical proof", q: "\"Is it as clinically proven as YuMove?\"",
+    a: ["YuMove has a strong published trial, I'd never claim to out-science the No.1 brand.",
+        "Nutraquin uses a different, well-evidenced formula: egg shell membrane, standardised-AKBA boswellia (400+ trials) and omega-3.",
+        "For most everyday mobility cases the outcome is comparable, and it's a more palatable daily chew.",
+        "If the clinical result is comparable, keeping the sale in-practice is the deciding factor."] },
+  { tag: "Price", q: "\"It looks more expensive than YuMove online.\"",
+    a: ["Online YuMove looks cheap precisely because it's discounted on Amazon and subscriptions, that's your leak.",
+        "At RRP you make around 41.7% on every Nutraquin pot, roughly £14.58 on the 50s and £25 on the 100s.",
+        "Because it isn't sold online, that RRP holds and your margin is protected.",
+        "It's not about being cheaper, it's about keeping the income on the sale."] },
+  { tag: "Risk", q: "\"What if it doesn't sell?\"",
+    a: ["That's why I'd start you on a small trial, a pot of each size, not a big commitment.",
+        "The mobility score cards help the team identify candidates so it moves off the shelf.",
+        "Next-day delivery means you never over-stock, reorder only as it sells.",
+        "I'll follow up in a couple of weeks to review how it's going."] },
+  { tag: "Range overlap", q: "\"We don't want two joint products competing on the shelf.\"",
+    a: ["Fair, so position them by job: YuMove for the clients set on it, Nutraquin as your recommended, margin-protected first-line.",
+        "The key difference is channel, Nutraquin is the one owners can't buy cheaper elsewhere.",
+        "Over time you'll see which protects your dispensing revenue best.",
+        "Start with the trial and let the numbers decide."] }
 ];
 
-/* -------------------------- MOCK interview drills -------------------------- */
-/* Interleaves scenario ("which one, when") with objection-style pushback. */
-window.MOCK = [
-  { id: "m1", type: "Scenario",
-    q: "A vet describes a 4-year-old Labrador with sudden loose stools after scavenging on a walk, otherwise bright and well. Owner wants something off-the-shelf. What do you suggest?",
-    answer: ["Rapid Stool Support Chews, consumer-available, built for mild→moderate acute upsets in an otherwise-well dog.",
-             "Montmorillonite clay + activated charcoal to firm and bind toxins; Bacillus velezensis probiotic.",
-             "Set the boundary: 1 chew twice daily for 3 days; if not resolved, see the vet."],
-    products: ["rapid-stool-chews"] },
-  { id: "m2", type: "Scenario",
-    q: "An elderly cat is brought in that swings between diarrhoea and constipation. Which acute product, and why?",
-    answer: ["Advanced Rapid Digestive Support Paste, it uses LOW-level kaolin (not high montmorillonite), so no constipation risk.",
-             "Sweet basil normalises gut motility, firming without over-binding.",
-             "It's vet-exclusive and cat-suitable, ideal for this flip-flop patient."],
-    products: ["advanced-rapid-paste"] },
-  { id: "m3", type: "Pushback",
-    q: "\"Isn't the Advanced Daily Powder just the normal powder with a markup?\"",
-    answer: ["No, the actives differ. Daily = pre + probiotic + B12. Advanced = pre + POSTbiotic (EpiCor) + B12 + B9.",
-             "The postbiotic works without live microbes, safe for severely immunocompromised patients.",
-             "Different clinical job, not just a price tier."],
-    products: ["advanced-daily-powder", "daily-powder"] },
-  { id: "m4", type: "Scenario",
-    q: "A severely immunocompromised dog needs gut support but the vet is wary of live probiotics. Your recommendation?",
-    answer: ["Advanced Daily Powder, the EpiCor postbiotic supports gut & immune health without introducing live bacteria.",
-             "You still get GI stabilisation safely.",
-             "Plus B12 + B9 for absorption-compromised patients."],
-    products: ["advanced-daily-powder"] },
-  { id: "m6", type: "Scenario",
-    q: "Recurrent anal gland problems in a dog on a raw, high-meat diet. What do you reach for?",
-    answer: ["Anal Gland Support, fibre-led, designed for low-fibre/high-meat diets.",
-             "Psyllium + apple + sugar beet pulp add bulk and a lubricating gel for normal expression.",
-             "Dogs only; dose by bodyweight (10g scoop)."],
-    products: ["anal-gland"] },
-  { id: "m7", type: "Pushback",
-    q: "\"How do I know the probiotics survive to do anything?\"",
-    answer: ["Each format is matched to the challenge: Calsporin (spore-former) survives chew manufacture.",
-             "The Daily Powder's Enterococcus faecium is micro-encapsulated through the gut.",
-             "The Paste delivers a high CFU count to colonise the lower gut quickly."],
-    products: ["rapid-stool-chews", "daily-powder", "advanced-rapid-paste"] },
-  { id: "m8", type: "Scenario",
-    q: "Give me the 30-second walkthrough of the whole digestive range as if I'm a vet you've just met.",
-    answer: ["Organise it by problem. Acute: Rapid Stool Chews (consumer, mild–mod) → Advanced Rapid Paste (vet, mild–severe).",
-             "Chronic: Daily Powder (consumer) → Advanced Daily Powder (vet, postbiotic, B12+B9).",
-             "Anal Gland Support for fibre-led anal gland cases.",
-             "All built on branded, evidence-backed actives, Calsporin, ProFeed, Oralin, EpiCor."],
-    products: ["rapid-stool-chews", "advanced-rapid-paste", "daily-powder", "advanced-daily-powder", "anal-gland"] }
+/* ------------------------------- Role-play -------------------------------- */
+/* Rehearse the visit: the 'practice' speaks, you answer aloud, reveal, self-score. */
+window.ROLEPLAY = [
+  { stage: "Open", q: "(Vet, a little guarded) 'We're pretty happy with what we use, but you've got two minutes.'",
+    answer: ["Thank them and stay relaxed, two minutes is enough.",
+             "Quick intro: you, Nutravet, first visit, here to help with a specific problem.",
+             "Earn the discovery: 'Can I ask one question about how you currently handle joint recommendations?'"] },
+  { stage: "Discover", q: "(Vet) 'Yeah, we recommend YuMove a lot. Why?'",
+    answer: ["Affirm it's a great product, then probe the leak.",
+             "'When you recommend it, how often do you think the owner actually buys it from you versus online?'",
+             "Let them say the frustration out loud, that's your opening."] },
+  { stage: "Pitch", q: "(Vet) 'Go on then, what makes Nutraquin different?'",
+    answer: ["Lead with channel: Nutravet doesn't supply Amazon or internet pharmacies, so the sale can't leak online.",
+             "Then margin: ~41.7% a pot and it can't be undercut.",
+             "Then product: palatable daily chew, egg shell membrane + boswellia + omega-3, drives compliance.",
+             "Support: brochures + mobility score cards, next-day before 4pm."] },
+  { stage: "Handle", q: "(Vet) 'But YuMove is the number one vet-recommended brand, and it's proven in six weeks.'",
+    answer: ["Agree, don't argue: it's the No.1 brand and well-proven.",
+             "Re-anchor: the problem you raised is owners buying it online, not whether it works.",
+             "Nutraquin is the clinically credible option that keeps the sale in-practice.",
+             "Avoid overclaiming on speed or strength (guardrails)."] },
+  { stage: "Handle", q: "(Vet) 'Honestly, it looks dearer than what people pay online for YuMove.'",
+    answer: ["Reframe: that low online price IS the leak, it's discounted on Amazon and subscriptions.",
+             "Nutraquin's RRP holds because it isn't sold online, so your ~41.7% margin is protected.",
+             "It's about keeping the income, not being the cheapest box."] },
+  { stage: "Discover", q: "(Vet) 'We're a busy independent, we don't have time to push new products.'",
+    answer: ["Empathise, then make it effortless.",
+             "Mobility score cards let the team flag candidates in seconds, no 'selling' needed.",
+             "Ordering is next-day before 4pm; I set up the trial and leave everything ready."] },
+  { stage: "Close", q: "(Vet) 'Okay, it's interesting. Leave me some info and I'll think about it.'",
+    answer: ["Welcome it, but ask for a small commitment now to create momentum.",
+             "'Shall we start with a trial, a pot of each size? Five pots clears free shipping and it's next-day.'",
+             "Leave brochures + score cards; agree a follow-up date to review.",
+             "Confirm the order before you leave."] },
+  { stage: "Close", q: "(Vet) 'Fine, send a pot of each and we'll trial it.'",
+    answer: ["Confirm clearly: a 50s and a 100s, ordered today before 4pm for next-day delivery.",
+             "Set up the team: leave the mobility score cards and brochures.",
+             "Lock the follow-up: 'I'll check in in two weeks to see how it's landing.'",
+             "Thank them and leave a strong final impression."] }
 ];
+
+window.GUARDRAILS = window.COMPETITOR.guardrails;

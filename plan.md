@@ -13,6 +13,61 @@ Everything below is in service of that single goal.
 
 ---
 
+## ⚡ ACTIVE BRIEF (2026-06-09 update) — supersedes the generic scope below
+
+The interview has been confirmed as a **role-play exercise**. The app is being re-pointed from
+"broad interview prep over the digestive range" to **this one specific sales visit**.
+
+### The scenario (from the assessor's email)
+- You are a **Nutravet Sales Representative** visiting an **independent vet practice for the first time**.
+- Goal: **introduce Nutraquin Chews** and run it as a real sales visit.
+- The practice **currently stocks YuMove** but is **frustrated that owners buy YuMove online** — so they
+  are open to alternatives. Prepare as though it were a real visit.
+
+### The product & commercials (authoritative — use these exact terms, not the public website's)
+- **Nutraquin Chews**, two sizes:
+  - **50s pot** — practice price **£20.41**, RRP **£34.99**  → profit **£14.58** (~41.7% margin)
+  - **100s pot** — practice price **£34.99**, RRP **£59.99** → profit **£25.00** (~41.7% margin)
+- **Next working day delivery** when ordered before **4pm**.
+- **Support materials:** product brochures + **mobility score cards** (use as recommendation tools).
+- **Discount structure:** 10% over £250 · 15% over £500 · 20% over £750 · **free shipping over £100**.
+
+### The winning strategy (verified)
+Lead with **margin / dispensing-revenue protection via channel exclusivity**, not ingredient one-upmanship:
+- **Nutravet sells ONLY through veterinary practices / authorised stockists — NOT Amazon or internet
+  pharmacies** (stated on nutravet.com FAQ + a named vet testimonial). So if the practice stocks
+  Nutraquin, **the sale can't leak online.**
+- **YuMove is everywhere online and openly discounted** (Amazon, Pets at Home, Sainsbury's, plus its own
+  site's 50%-off-first-2-months / 20%-ongoing subscriptions). That is precisely why owners bypass the
+  practice.
+- So the narrative: *"Switch your first-line joint chew to Nutraquin Chews — clinically credible AND it
+  protects your dispensing income, because owners can't buy it cheaper online."*
+
+### Guardrails (do NOT overclaim — the assessor may probe)
+- Do **not** assert a formally-named "RRP / margin-protection policy." Say truthfully: *"Nutravet doesn't
+  supply Amazon or internet pharmacies, so nothing undercuts your shelf price."*
+- Do **not** claim Nutraquin Chews are "stronger" or have "more glucosamine" than YuMove. They use a
+  **different formulation** (egg shell membrane + boswellia + omega-3, not high-dose GLM/glucosamine).
+  Frame as a *different mechanism + palatability + channel*, not "better numbers."
+- **Respect YuMove** — it is genuinely the UK's No.1 vet-recommended joint brand (Kynetec 2025). Pivot on
+  channel + margin; never trash it.
+- The "faster onset" point (chews claim ~1 week vs YuMove's 6-week trial) is a **claim** — YuMove's 6-week
+  figure is the more formally published (RVC trial). Present accordingly.
+
+### Re-shaped app structure (proposed)
+A single-visit **sales playbook**, not a range walkthrough:
+1. **The Brief** — scenario, the practice, the winning strategy (quick reference).
+2. **The Product** — Nutraquin Chews, known cold (honest framing).
+3. **The Commercials** — margin maths, discount tiers, delivery, support materials as selling tools.
+4. **Beat YuMove** — competitor intel + the online-leakage/channel angle + honest side-by-side + guardrails.
+5. **The Visit** — the call structure: Open → Discover → Pitch → Handle → Close (what to say/ask at each).
+6. **Objections** — tailored bank ("we already use YuMove", "clients ask for it by name", etc.).
+7. **Role-play** — rehearse the full visit, self-scored. The centerpiece (the exercise *is* a role-play).
+
+The existing digestive (Nutrabio) build is **archived/repurposed** — same engine, new content & sections.
+
+---
+
 ## Goals & success criteria
 
 **The one goal everything serves:** make Luke **interview-ready for the Nutravet sales-rep role** — a
