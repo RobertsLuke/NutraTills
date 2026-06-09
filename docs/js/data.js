@@ -1,100 +1,73 @@
 /* ============================================================================
-   NutraTills, sales-visit playbook data.
+   NutraTills, sales-visit playbook data (CORRECTED channel model).
    SCENARIO: Nutravet rep, first visit to an independent practice that stocks
-   YuMove, to introduce Nutraquin Chews. (Assessor role-play brief, 2026-06.)
-   Commercial terms are taken from the assessor's email (authoritative).
-   Competitor/channel facts are research-verified; content DERIVED for the pitch,
-   not veterinary advice.
+   YuMove, to introduce Nutraquin Chews.
+
+   CORRECTED PREMISE (important):
+   Nutravet has BOTH (a) open-market products anyone can buy (like YuMove) AND
+   (b) a VET / STOCKIST-EXCLUSIVE range available only through practices &
+   authorised stockists. The sales angle is (b): stocking unlocks exclusive lines
+   owners CANNOT buy online or in supermarkets, which directly tackles the
+   practice's online-leakage frustration. Do NOT claim "Nutravet can't be bought
+   online", that is false.
+
+   ⚠️ TO CONFIRM WITH LUKE:
+   - The authoritative list of stockist-exclusive products (draft below from the
+     catalogue's "Vet Select" badges + range video, NOT yet confirmed).
+   - Whether Nutraquin Chews itself is exclusive or open-market (assumed OPEN here,
+     it is badged "Recommended by vets", not "Vet Select").
    ============================================================================ */
 
-window.BRIEF = {
-  title: "Nutraquin Chews, first sales visit",
-  scenario:
-    "You are a Nutravet Sales Representative visiting an independent veterinary practice for the first time " +
-    "to introduce Nutraquin Chews. The practice currently stocks YuMove but may be open to alternatives, " +
-    "because they're frustrated that owners buy YuMove online instead of from the practice.",
-  goal: "Run it like a real sales visit and earn a trial order, by solving their problem, not just pitching a product.",
-  winningStrategy:
-    "Their pain is not clinical, it's margin leakage: they recommend YuMove, the owner buys it cheaper on " +
-    "Amazon, and the practice loses the repeat dispensing revenue. Your clean, verifiable win is channel " +
-    "exclusivity: Nutravet sells ONLY through veterinary practices and authorised stockists, never Amazon or " +
-    "internet pharmacies. Stock Nutraquin Chews and the sale can't leak online, so the practice keeps the income.",
-  keyFacts: [
-    "Nutravet does NOT supply Amazon or internet pharmacies (vet-channel exclusive).",
-    "YuMove is sold on Amazon, Pets at Home, Sainsbury's and its own site with 50% / 20% subscription discounts.",
-    "Practice margin on Nutraquin Chews is about 41.7% on every pot, and it can't be undercut online.",
-    "Next working day delivery if ordered before 4pm; free shipping over £100.",
-    "Support materials: product brochures + mobility score cards (recommendation tools)."
+/* --------------------------- The corrected angle -------------------------- */
+window.STRATEGY = {
+  scenarioLine: "First visit to an independent practice that stocks YuMove and is frustrated owners buy it online.",
+  core:
+    "Their pain is margin leakage: they recommend a joint supplement, the owner buys it cheaper online or grabs " +
+    "it in a supermarket, and the practice loses the sale. The honest, winning angle is EXCLUSIVITY, not 'we're " +
+    "never sold online'. Nutravet has open-market lines like everyone else, but it ALSO has a vet/stockist-exclusive " +
+    "range. Become a stockist and you unlock products owners simply cannot buy on Amazon or pick up in Sainsbury's, " +
+    "so those recommendations have to convert through your practice.",
+  twoTier: [
+    "Open-market lines: anyone can buy them (same as YuMove). Not your differentiator.",
+    "Stockist-exclusive range: only available through veterinary practices & authorised stockists.",
+    "The exclusive range is the part of the pitch that actually solves their leakage problem."
+  ],
+  exclusivityAngle: [
+    "Recommend an exclusive line and the only place the owner can get it is from you, the sale stays in-practice.",
+    "Position the exclusivity as a premium / considered purchase, not a limitation.",
+    "Nutraquin Chews is the easy first step / door-opener into becoming a Nutravet stockist and unlocking that range."
+  ],
+  ubiquityAngle: [
+    "YuMove is everywhere, Sainsbury's, Pets at Home, Amazon, so owners grab it on impulse while shopping for other things.",
+    "That casual availability is exactly how the sale leaks out of the practice.",
+    "An exclusive line can't be impulse-bought elsewhere, it's a practice-led recommendation, which keeps the relationship and the revenue with the practice."
+  ],
+  honestCaveats: [
+    "Do NOT say 'Nutravet can't be bought online', it can. The angle is the EXCLUSIVE range, not the whole brand.",
+    "Until confirmed, don't claim Nutraquin Chews itself is exclusive, lead with it as the product + the exclusive-range access as the strategic win.",
+    "Respect YuMove (UK No.1 vet-recommended). Win on exclusivity & relationship, not by trashing it or out-claiming the science."
   ]
 };
 
-/* ------------------------------- The product ------------------------------ */
-window.PRODUCT = {
-  name: "Nutraquin Chews",
-  tagline: "Tasty daily chews for joints, mobility & structural support",
-  species: "Dogs",
-  form: "Soft chew (3g), hydrolysed chicken-liver flavour",
-  onset: "Noticeable on average within ~1 week (present as a claim).",
-  sizes: [
-    { size: "50s pot", practice: "£20.41", rrp: "£34.99" },
-    { size: "100s pot", practice: "£34.99", rrp: "£59.99" }
+/* ------------------- Stockist-exclusive range (DRAFT) --------------------- */
+window.EXCLUSIVES = {
+  intro:
+    "This is the heart of the pitch. As a Nutravet stockist the practice gets access to lines that owners can't " +
+    "buy online or in a supermarket, the direct answer to 'our clients just buy it online'.",
+  pitch: [
+    "'You're frustrated owners buy YuMove online. The fix is recommending lines they can only get from you.'",
+    "'As a Nutravet stockist you unlock our exclusive range, no Amazon, no supermarket shelf.'",
+    "'Every recommendation on those lines is a sale that has to come back to your practice.'",
+    "'Nutraquin Chews is your easy way in, then you've got the exclusive range behind it.'"
   ],
-  whatItDoes: [
-    "Daily support for joint & mobility health",
-    "Aids joint structure, tendons & cartilage",
-    "Soothes & comforts stiff joints",
-    "Tasty formula built for easy administration & compliance"
-  ],
-  benefits: [
-    ["Palatability = compliance", "A hydrolysed chicken-liver chew dogs actually take, so owners keep giving it."],
-    ["Structural support", "Egg shell membrane delivers multiple joint nutrients from one source."],
-    ["Natural anti-inflammatory angle", "Standardised-AKBA boswellia supports the natural systems that control inflammation."],
-    ["Gut-joint axis", "Pre & postbiotics support absorption of joint nutrients, a point of difference."]
-  ],
-  ingredients: [
-    { name: "Egg shell membrane (175mg)", cls: "Structural multi-nutrient", detail: "Naturally contains collagen, hyaluronic acid, glucosamine, chondroitin and ~400 proteins. 20+ studies. Supports cartilage & tendons." },
-    { name: "Boswellia extract (50mg)", cls: "Natural anti-inflammatory", detail: "Standardised Acetyl-11-keto-boswellic acid (AKBA), the active fraction. 400+ trials behind boswellia." },
-    { name: "Omega-3 (142.5mg; EPA 70 / DHA 47.5)", cls: "Essential fatty acids", detail: "High-purity refined fish oil. Supports natural anti-inflammatory systems and blood flow to the joints." },
-    { name: "Pre & postbiotics (hydrolysed yeast)", cls: "Gut-joint axis", detail: "Supports a healthier gut to improve absorption of joint nutrients." }
-  ],
-  dosing: {
-    note: "Daily chew, by bodyweight. No loading phase.",
-    rows: [
-      ["Small dog", "0 to 9.99kg", "0.5 chew/day"],
-      ["Medium / large dog", "10 to 29.99kg", "1 chew/day"],
-      ["Large dog", "30kg+", "2 chews/day"]
-    ]
-  },
-  honestFraming: [
-    "Different formulation to YuMove (egg shell membrane + boswellia + omega-3), NOT high-dose glucosamine/GLM. Frame as a different mechanism, not 'more glucosamine'.",
-    "The ~1 week onset is a claim; YuMove's 6-week figure is the more formally published (RVC trial).",
-    "Lead with channel + margin + compliance, then support with the natural formula. Don't out-science the No.1 brand."
-  ]
-};
-
-/* ------------------------------ The commercials --------------------------- */
-window.COMMERCIALS = {
-  margins: [
-    { size: "50s pot", practice: "£20.41", rrp: "£34.99", profit: "£14.58", margin: "41.7%" },
-    { size: "100s pot", practice: "£34.99", rrp: "£59.99", profit: "£25.00", margin: "41.7%" }
-  ],
-  marginLine: "About 41.7% margin on every pot (~71% markup on cost), and you keep all of it because it can't be undercut online.",
-  delivery: "Next working day delivery when ordered before 4pm.",
-  freeShipping: "Free shipping on orders over £100.",
-  discountTiers: [
-    ["Over £250", "10% discount"],
-    ["Over £500", "15% discount"],
-    ["Over £750", "20% discount"]
-  ],
-  supportMaterials: [
-    ["Product brochures", "Hand to owners to support the recommendation at the point of sale."],
-    ["Mobility score cards", "A tool for the team to identify mobility candidates and start owner conversations, which drives in-practice recommendations (and sales)."]
-  ],
-  useInPitch: [
-    "Turn margin into a sentence: 'You make around £14.58 a pot on the 50s and £25 on the 100s, and none of it leaks online.'",
-    "Lower the commitment: 'An opening order of just five pots clears the £100 free-shipping threshold.'",
-    "Use the tiers to grow the order: 'If you take a starter range across sizes you're close to the £250 / 10% tier.'",
-    "Position the mobility score cards as a recommendation engine, not a freebie."
+  draftListNote: "DRAFT, assembled from the catalogue's 'Vet Select' badges + range video. CONFIRM the real list with Luke before relying on it.",
+  draftList: [
+    { name: "Nutraflex", category: "Joint & mobility", note: "Catalogue 'Vet Select' badge" },
+    { name: "Nutracys+", category: "Urinary tract", note: "Catalogue 'Vet Select' badge" },
+    { name: "Nutraren", category: "Renal / kidney", note: "Catalogue 'Vet Select' badge" },
+    { name: "Nutramed (ageing pets)", category: "General / senior", note: "Catalogue 'Vet Select' badge" },
+    { name: "Nutrabio Advanced (paste)", category: "Digestive", note: "Range video: 'veterinary practice exclusive'" },
+    { name: "Nutrabio Advanced (powder)", category: "Digestive", note: "Range video: 'veterinary practice exclusive'" }
   ]
 };
 
@@ -103,104 +76,99 @@ window.COMPETITOR = {
   name: "YuMove (Lintbells)",
   respect: [
     "Genuinely the UK's No.1 vet-recommended joint supplement brand (Kynetec 2025, 84% of vets).",
-    "Hero ingredient: ActivEase Green Lipped Mussel; also glucosamine, hyaluronic acid, manganese, vitamins.",
+    "Hero ingredient: ActivEase Green Lipped Mussel; plus glucosamine, hyaluronic acid, manganese, vitamins.",
     "Marketed as scientifically proven in 6 weeks (double-blind, placebo-controlled; RVC-linked trial)."
   ],
-  leakage: [
-    "Sold on Amazon UK, Pets at Home, Sainsbury's, eBay and third-party online retailers.",
-    "Its own site offers 50% off the first 2 months and 20% off ongoing via Subscribe & Save, plus multibuy deals.",
-    "So a practice selling YuMove at RRP simply cannot compete with the online price, which is why owners buy online."
+  ubiquityLeak: [
+    "Sold in Sainsbury's, Pets at Home, Amazon, eBay and on its own site with subscriptions.",
+    "Owners see it on a shelf while shopping for other things and grab it, the sale never reaches the practice.",
+    "Its own site discounts heavily (50% off first 2 months, 20% ongoing), so the practice can't compete on price either.",
+    "Net effect: the practice recommends it but loses the sale. That's the frustration to lean into."
   ],
   counter: [
-    "Nutravet sells ONLY through veterinary practices and authorised stockists.",
-    "It does NOT supply Amazon or internet pharmacies, so there's no online channel undercutting your shelf price.",
-    "Stock Nutraquin Chews and the recommendation converts to a sale that stays in your practice."
+    "You can't out-ubiquity YuMove, so flip it: exclusivity is the answer.",
+    "An exclusive line isn't on a supermarket shelf or Amazon, it can only come from the practice.",
+    "Frame the scarcity as premium and practice-led: 'this is something you offer that they can't get anywhere else.'",
+    "Nutraquin Chews opens the door; the exclusive range is what protects the dispensing revenue."
   ],
   compare: [
-    { axis: "Channel", nutra: "Vet practices / authorised stockists only", yumove: "Amazon, supermarkets, Pets at Home, D2C subscriptions" },
-    { axis: "Online undercut", nutra: "None, not supplied to online discounters", yumove: "Routinely discounted 20 to 50% online" },
-    { axis: "Lead actives", nutra: "Egg shell membrane + boswellia (AKBA) + omega-3", yumove: "Green Lipped Mussel (ActivEase) + glucosamine" },
-    { axis: "Format", nutra: "Soft chew, chicken-liver flavour", yumove: "Tablets, Tasty Tablets, Daily Bites" },
-    { axis: "Onset claim", nutra: "~1 week (claim)", yumove: "6 weeks (RVC trial)" },
-    { axis: "Practice revenue", nutra: "Protected, sale stays in practice", yumove: "Leaks to online channels" }
+    { axis: "Where owners buy it", nutra: "Exclusive range: only via practice / authorised stockist", yumove: "Supermarkets, Pets at Home, Amazon, D2C" },
+    { axis: "Impulse availability", nutra: "Can't be grabbed elsewhere, considered, practice-led", yumove: "Picked up casually while shopping" },
+    { axis: "Sale stays in-practice", nutra: "Yes, for the exclusive lines", yumove: "Leaks to retail & online" },
+    { axis: "Online discounting", nutra: "No online channel undercutting exclusive lines", yumove: "Routinely 20 to 50% off online" },
+    { axis: "Brand strength", nutra: "Smaller, vet-focused, relationship-led", yumove: "No.1 vet-recommended, mass-market" }
   ],
   guardrails: [
-    "Do NOT claim a formally-named 'margin-protection policy'. Say: 'They don't supply Amazon or internet pharmacies, so nothing undercuts your shelf price.'",
-    "Do NOT claim Nutraquin Chews are 'stronger' or have 'more glucosamine' than YuMove. Different formulation, frame as a different mechanism.",
-    "Do NOT trash YuMove, it's the No.1 vet-recommended brand. Respect it, then pivot to channel + margin.",
-    "Treat the ~1 week onset as a claim, not a published head-to-head result."
+    "Do NOT claim 'Nutravet can't be bought online', it can. The angle is the EXCLUSIVE range only.",
+    "Do NOT claim Nutraquin Chews is exclusive until confirmed, it may be an open-market line.",
+    "Do NOT claim Nutraquin Chews has 'more glucosamine' or is 'stronger' than YuMove, different formulation.",
+    "Do NOT trash YuMove, respect the No.1 brand, then pivot to exclusivity and relationship."
   ]
 };
 
 /* ------------------------------- The visit -------------------------------- */
-/* The call structure: Open -> Discover -> Pitch -> Handle -> Close */
 window.VISIT = [
   {
     stage: "1. Open",
-    purpose: "Introduce yourself and Nutravet, build rapport, earn permission for a few minutes.",
+    purpose: "Introduce yourself and Nutravet, build rapport, earn a few minutes.",
     say: [
       "Introduce yourself, Nutravet, and that it's your first visit.",
-      "Be warm and concise; respect their time. Ask for a few minutes.",
-      "Signal you're here to help with a problem, not just sell a box."
+      "Be warm and concise, respect their time.",
+      "Signal you're here to help with a problem they already have, not just sell a box."
     ],
-    ask: [
-      "'Is now an ok moment for a quick introduction?'",
-      "'How familiar are you already with Nutravet?'"
-    ]
+    ask: ["'Is now an ok moment for a quick introduction?'", "'How familiar are you already with Nutravet?'"]
   },
   {
     stage: "2. Discover",
-    purpose: "Surface the YuMove frustration in their own words before you pitch. Listen more than you talk.",
+    purpose: "Get them to name the online-leakage pain themselves before you pitch.",
     say: [
       "Acknowledge they already do joint care well with YuMove.",
-      "Probe the online-leakage pain so THEY say it out loud."
+      "Probe how much of what they recommend actually converts to a sale in-practice."
     ],
     ask: [
       "'How are you finding YuMove with your clients at the moment?'",
-      "'When you recommend a joint supplement, how often do you think the owner buys it from you versus online?'",
-      "'How much does that lost dispensing revenue matter to the practice?'",
-      "'What would make you consider stocking a second option?'"
+      "'When you recommend it, how often do you think the owner buys it from you versus online or in a supermarket?'",
+      "'How much does that lost sale matter to the practice?'",
+      "'Would access to lines owners can ONLY get from you be useful?'"
     ]
   },
   {
     stage: "3. Pitch",
-    purpose: "Bridge from their pain to Nutraquin Chews. Lead with channel + margin, support with the product.",
+    purpose: "Introduce Nutraquin Chews, then land the exclusivity angle as the leakage fix.",
     say: [
-      "Bridge: 'That online leakage is exactly the problem Nutraquin solves.'",
-      "Channel: Nutravet doesn't supply Amazon or internet pharmacies, so the sale stays with you.",
-      "Margin: ~41.7% on every pot, and none of it leaks online.",
-      "Product: a palatable daily chew (egg shell membrane + boswellia + omega-3) that drives compliance.",
-      "Support: brochures + mobility score cards to drive recommendations; next-day delivery before 4pm."
+      "Introduce Nutraquin Chews briefly: a palatable daily joint chew dogs actually take.",
+      "Bridge to the real win: 'The bigger thing is what becoming a stockist unlocks.'",
+      "Exclusivity: Nutravet has a vet/stockist-exclusive range owners can't buy online or in supermarkets.",
+      "So recommendations on those lines convert in-practice, no leaking to Amazon or Sainsbury's.",
+      "Frame the exclusivity as premium and relationship-led, something only you can offer clients."
     ],
     ask: [
-      "'Does protecting that dispensing income sound useful to you?'",
-      "'Would a palatable chew help with the fussy dogs you struggle to dose?'"
+      "'Does having lines clients can only get from you sound useful?'",
+      "'Shall I show you what's in the exclusive range?'"
     ]
   },
   {
     stage: "4. Handle",
-    purpose: "Meet objections calmly. Respect YuMove, re-anchor on channel, margin and compliance.",
+    purpose: "Meet objections calmly. Respect YuMove, re-anchor on exclusivity & relationship.",
     say: [
-      "Don't argue clinically against the No.1 brand; position Nutraquin as the option owners can't buy cheaper online.",
-      "Use honest framing; never overclaim (see guardrails).",
+      "Don't fight YuMove clinically; position the exclusive range as what they can't buy elsewhere.",
+      "Use honest framing, never overclaim (see guardrails).",
       "See the Objections section for the full bank."
     ],
-    ask: [
-      "'If the clinical outcome is comparable, would keeping the sale in-practice tip it for you?'"
-    ]
+    ask: ["'If the clinical outcome is comparable, would keeping the sale in-practice tip it for you?'"]
   },
   {
     stage: "5. Close",
-    purpose: "Ask for a small, easy commitment, a trial order, and agree next steps.",
+    purpose: "Ask for a small, easy commitment and agree next steps.",
     say: [
-      "Make it low-risk: suggest a trial of a pot of each size.",
-      "Reduce friction: 'Five pots clears free shipping, and it's next-day if you order before 4pm.'",
-      "Leave the mobility score cards so the team can start identifying candidates this week.",
-      "Agree a follow-up to review how it's going."
+      "Make it low-risk: start with Nutraquin Chews as the first stocked line.",
+      "Open the door to the exclusive range as the next conversation.",
+      "Leave support materials so the team can start recommending.",
+      "Agree a follow-up to review how it's landing."
     ],
     ask: [
-      "'Shall we start with a trial, a pot of each size, on next-day delivery?'",
-      "'Can I check back in a couple of weeks to see how the team are finding it?'"
+      "'Shall we get you set up as a stockist and start with a Nutraquin Chews trial?'",
+      "'Can I come back to walk the team through the exclusive range?'"
     ]
   }
 ];
@@ -208,81 +176,80 @@ window.VISIT = [
 /* ------------------------------ Objections -------------------------------- */
 window.OBJECTIONS = [
   { tag: "Loyalty", q: "\"We already use YuMove and we're happy with it.\"",
-    a: ["Great, it's a strong product and clearly working clinically, I'm not asking you to drop it.",
-        "The issue you raised is that owners buy it online, so you recommend it but lose the sale.",
-        "Nutraquin gives you a joint recommendation that can't leak online, because Nutravet doesn't supply Amazon or internet pharmacies.",
-        "Think of it as protecting the revenue on the recommendations you're already making."] },
+    a: ["Great, keep it, it's a strong product and clearly working clinically.",
+        "The problem you raised is that owners buy it online, so you recommend it but lose the sale.",
+        "Becoming a Nutravet stockist unlocks an exclusive range owners can't buy on Amazon or in a supermarket.",
+        "Those recommendations convert in-practice. Nutraquin Chews is the easy first step in."] },
   { tag: "Client demand", q: "\"Our clients ask for YuMove by name.\"",
-    a: ["Understandable, it's the No.1 vet-recommended brand and brilliantly marketed.",
-        "But the clients asking by name are often the ones buying it cheaper online afterwards.",
-        "When the practice actively recommends Nutraquin as your first-line chew, owners follow your lead, and that sale stays with you.",
-        "The mobility score cards help the team start that conversation consistently."] },
+    a: ["Of course, it's the No.1 brand and it's on every shelf, so it's front of mind.",
+        "But that ubiquity is the problem, they see it in Pets at Home and grab it, bypassing you.",
+        "An exclusive line can't be picked up elsewhere, so when you recommend it the sale comes back to you.",
+        "You become the only place they can get it."] },
   { tag: "Effort / change", q: "\"Switching is hassle, why change what works?\"",
-    a: ["You don't have to switch, you can add it as your protected-margin first-line chew.",
-        "Ordering is simple: next working day before 4pm, free shipping over £100.",
-        "A trial of a pot of each size is a tiny, low-risk first step.",
-        "I'll set it up and leave the support materials so there's nothing for your team to figure out."] },
+    a: ["You don't switch, you add Nutraquin Chews and unlock the exclusive range alongside YuMove.",
+        "Ordering is simple: next working day before 4pm.",
+        "Start with a small Nutraquin trial, tiny commitment.",
+        "I set it up and leave the support materials so there's nothing for your team to figure out."] },
   { tag: "Clinical proof", q: "\"Is it as clinically proven as YuMove?\"",
     a: ["YuMove has a strong published trial, I'd never claim to out-science the No.1 brand.",
-        "Nutraquin uses a different, well-evidenced formula: egg shell membrane, standardised-AKBA boswellia (400+ trials) and omega-3.",
-        "For most everyday mobility cases the outcome is comparable, and it's a more palatable daily chew.",
-        "If the clinical result is comparable, keeping the sale in-practice is the deciding factor."] },
-  { tag: "Price", q: "\"It looks more expensive than YuMove online.\"",
-    a: ["Online YuMove looks cheap precisely because it's discounted on Amazon and subscriptions, that's your leak.",
-        "At RRP you make around 41.7% on every Nutraquin pot, roughly £14.58 on the 50s and £25 on the 100s.",
-        "Because it isn't sold online, that RRP holds and your margin is protected.",
-        "It's not about being cheaper, it's about keeping the income on the sale."] },
+        "Nutraquin uses a different, well-evidenced formula (egg shell membrane, boswellia, omega-3).",
+        "But the deciding point here isn't the science, it's that the exclusive lines keep the sale in your practice.",
+        "If the clinical result is comparable, exclusivity is what tips it."] },
+  { tag: "Price", q: "\"YuMove is cheaper online than your RRP.\"",
+    a: ["It's cheap online precisely because it's discounted everywhere, that's the leak you're frustrated by.",
+        "The exclusive range has no online channel undercutting it, so the price and your margin hold.",
+        "It's not about being the cheapest box, it's about keeping the income on the sale.",
+        "(For Nutraquin Chews specifically, confirm its channel before leaning on this.)"] },
   { tag: "Risk", q: "\"What if it doesn't sell?\"",
-    a: ["That's why I'd start you on a small trial, a pot of each size, not a big commitment.",
-        "The mobility score cards help the team identify candidates so it moves off the shelf.",
-        "Next-day delivery means you never over-stock, reorder only as it sells.",
-        "I'll follow up in a couple of weeks to review how it's going."] },
+    a: ["That's why we start small, a Nutraquin Chews trial, not a big order.",
+        "Support materials help the team recommend it so it moves.",
+        "Next-day delivery means you reorder only as it sells, never over-stock.",
+        "I'll follow up to review how it's going."] },
   { tag: "Range overlap", q: "\"We don't want two joint products competing on the shelf.\"",
-    a: ["Fair, so position them by job: YuMove for the clients set on it, Nutraquin as your recommended, margin-protected first-line.",
-        "The key difference is channel, Nutraquin is the one owners can't buy cheaper elsewhere.",
-        "Over time you'll see which protects your dispensing revenue best.",
-        "Start with the trial and let the numbers decide."] }
+    a: ["Fair, position them by job: YuMove for clients set on it, the exclusive lines as your protected recommendations.",
+        "The key difference is exclusivity, those are the ones owners can't buy cheaper elsewhere.",
+        "Over time you'll see which protects your dispensing revenue.",
+        "Start with Nutraquin Chews and let the results decide."] }
 ];
 
 /* ------------------------------- Role-play -------------------------------- */
-/* Rehearse the visit: the 'practice' speaks, you answer aloud, reveal, self-score. */
 window.ROLEPLAY = [
-  { stage: "Open", q: "(Vet, a little guarded) 'We're pretty happy with what we use, but you've got two minutes.'",
-    answer: ["Thank them and stay relaxed, two minutes is enough.",
+  { stage: "Open", q: "(Vet, a little guarded) 'We're happy with what we use, but you've got two minutes.'",
+    answer: ["Thank them, stay relaxed, two minutes is enough.",
              "Quick intro: you, Nutravet, first visit, here to help with a specific problem.",
-             "Earn the discovery: 'Can I ask one question about how you currently handle joint recommendations?'"] },
-  { stage: "Discover", q: "(Vet) 'Yeah, we recommend YuMove a lot. Why?'",
+             "Earn discovery: 'Can I ask one question about how you handle joint recommendations?'"] },
+  { stage: "Discover", q: "(Vet) 'We recommend YuMove a lot. Why?'",
     answer: ["Affirm it's a great product, then probe the leak.",
-             "'When you recommend it, how often do you think the owner actually buys it from you versus online?'",
-             "Let them say the frustration out loud, that's your opening."] },
-  { stage: "Pitch", q: "(Vet) 'Go on then, what makes Nutraquin different?'",
-    answer: ["Lead with channel: Nutravet doesn't supply Amazon or internet pharmacies, so the sale can't leak online.",
-             "Then margin: ~41.7% a pot and it can't be undercut.",
-             "Then product: palatable daily chew, egg shell membrane + boswellia + omega-3, drives compliance.",
-             "Support: brochures + mobility score cards, next-day before 4pm."] },
-  { stage: "Handle", q: "(Vet) 'But YuMove is the number one vet-recommended brand, and it's proven in six weeks.'",
+             "'When you recommend it, how often does the owner actually buy it from you versus online or in a supermarket?'",
+             "Let them voice the frustration, that's your opening for the exclusivity angle."] },
+  { stage: "Pitch", q: "(Vet) 'Go on then, what makes this worth my time?'",
+    answer: ["Introduce Nutraquin Chews briefly: palatable daily joint chew, great for compliance.",
+             "Then the real win: as a stockist you unlock Nutravet's exclusive range.",
+             "Those lines aren't on Amazon or supermarket shelves, owners can only get them from you.",
+             "So your recommendations convert in-practice instead of leaking online."] },
+  { stage: "Handle", q: "(Vet) 'But YuMove is the No.1 vet-recommended brand and it's proven in six weeks.'",
     answer: ["Agree, don't argue: it's the No.1 brand and well-proven.",
-             "Re-anchor: the problem you raised is owners buying it online, not whether it works.",
-             "Nutraquin is the clinically credible option that keeps the sale in-practice.",
+             "Re-anchor: the problem you raised is owners buying it elsewhere, not whether it works.",
+             "The exclusive range is the credible option they can ONLY get from you.",
              "Avoid overclaiming on speed or strength (guardrails)."] },
-  { stage: "Handle", q: "(Vet) 'Honestly, it looks dearer than what people pay online for YuMove.'",
-    answer: ["Reframe: that low online price IS the leak, it's discounted on Amazon and subscriptions.",
-             "Nutraquin's RRP holds because it isn't sold online, so your ~41.7% margin is protected.",
-             "It's about keeping the income, not being the cheapest box."] },
+  { stage: "Handle", q: "(Vet) 'Clients see YuMove in Sainsbury's and just buy it there.'",
+    answer: ["Exactly, that ubiquity is the leak, you recommend, they grab it while shopping.",
+             "An exclusive line can't be picked up in Sainsbury's, it has to come from you.",
+             "Frame it as a premium, practice-only recommendation, the sale stays in-house."] },
   { stage: "Discover", q: "(Vet) 'We're a busy independent, we don't have time to push new products.'",
     answer: ["Empathise, then make it effortless.",
-             "Mobility score cards let the team flag candidates in seconds, no 'selling' needed.",
-             "Ordering is next-day before 4pm; I set up the trial and leave everything ready."] },
+             "Support materials let the team recommend in seconds, no hard selling.",
+             "Ordering is next-day before 4pm, I set up the trial and leave everything ready."] },
   { stage: "Close", q: "(Vet) 'Okay, it's interesting. Leave me some info and I'll think about it.'",
-    answer: ["Welcome it, but ask for a small commitment now to create momentum.",
-             "'Shall we start with a trial, a pot of each size? Five pots clears free shipping and it's next-day.'",
-             "Leave brochures + score cards; agree a follow-up date to review.",
-             "Confirm the order before you leave."] },
-  { stage: "Close", q: "(Vet) 'Fine, send a pot of each and we'll trial it.'",
-    answer: ["Confirm clearly: a 50s and a 100s, ordered today before 4pm for next-day delivery.",
-             "Set up the team: leave the mobility score cards and brochures.",
-             "Lock the follow-up: 'I'll check in in two weeks to see how it's landing.'",
-             "Thank them and leave a strong final impression."] }
+    answer: ["Welcome it, but ask for a small commitment now to build momentum.",
+             "'Shall we get you set up as a stockist and start with a Nutraquin Chews trial?'",
+             "Open the next step: 'I'll come back to walk the team through the exclusive range.'",
+             "Leave support materials and agree a follow-up date."] },
+  { stage: "Close", q: "(Vet) 'Fine, set us up and we'll trial the chews.'",
+    answer: ["Confirm clearly: stockist set-up + a Nutraquin Chews trial, next-day if ordered before 4pm.",
+             "Tee up the bigger play: book the visit to walk the exclusive range.",
+             "Leave the support materials so the team can start recommending.",
+             "Lock the follow-up and leave a strong final impression."] }
 ];
 
 window.GUARDRAILS = window.COMPETITOR.guardrails;

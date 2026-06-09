@@ -32,16 +32,22 @@ The interview has been confirmed as a **role-play exercise**. The app is being r
 - **Support materials:** product brochures + **mobility score cards** (use as recommendation tools).
 - **Discount structure:** 10% over £250 · 15% over £500 · 20% over £750 · **free shipping over £100**.
 
-### The winning strategy (verified)
-Lead with **margin / dispensing-revenue protection via channel exclusivity**, not ingredient one-upmanship:
-- **Nutravet sells ONLY through veterinary practices / authorised stockists — NOT Amazon or internet
-  pharmacies** (stated on nutravet.com FAQ + a named vet testimonial). So if the practice stocks
-  Nutraquin, **the sale can't leak online.**
-- **YuMove is everywhere online and openly discounted** (Amazon, Pets at Home, Sainsbury's, plus its own
-  site's 50%-off-first-2-months / 20%-ongoing subscriptions). That is precisely why owners bypass the
-  practice.
-- So the narrative: *"Switch your first-line joint chew to Nutraquin Chews — clinically credible AND it
-  protects your dispensing income, because owners can't buy it cheaper online."*
+### The winning strategy (CORRECTED 2026-06-09)
+> ❌ EARLIER ERROR: I claimed "Nutravet can't be bought online." That is **false** and has been removed.
+> Nutravet has open-market products too. Corrected angle below.
+
+Lead with **exclusivity**, honestly framed:
+- Nutravet has **two tiers**: open-market products anyone can buy (like YuMove) **AND a vet/stockist-exclusive
+  range** available only through practices / authorised stockists.
+- The pitch is the **exclusive range**: become a stockist and you unlock lines owners **cannot buy on Amazon
+  or pick up in a supermarket**, so those recommendations convert in-practice. That is the real fix for the
+  leakage frustration.
+- **Ubiquity vs exclusivity:** YuMove is everywhere (Sainsbury's, Pets at Home, Amazon), so owners grab it on
+  impulse while shopping; the sale leaks out casually. An exclusive line is a considered, practice-led
+  recommendation that can't be bought elsewhere, frame the scarcity as premium.
+- **Nutraquin Chews** is the **door-opener / first stocked line**; the exclusive range is the strategic win.
+- TO CONFIRM with Luke: the authoritative exclusive-product list, and whether Nutraquin Chews itself is
+  exclusive or open-market (assumed open).
 
 ### Guardrails (do NOT overclaim — the assessor may probe)
 - Do **not** assert a formally-named "RRP / margin-protection policy." Say truthfully: *"Nutravet doesn't
