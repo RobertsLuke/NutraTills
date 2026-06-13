@@ -46,8 +46,12 @@ Lead with **exclusivity**, honestly framed:
   impulse while shopping; the sale leaks out casually. An exclusive line is a considered, practice-led
   recommendation that can't be bought elsewhere, frame the scarcity as premium.
 - **Nutraquin Chews** is the **door-opener / first stocked line**; the exclusive range is the strategic win.
-- TO CONFIRM with Luke: the authoritative exclusive-product list, and whether Nutraquin Chews itself is
-  exclusive or open-market (assumed open).
+
+**✅ CONFIRMED vet/stockist-exclusive list** (from nutravet.co.uk shop, vet-exclusive filter, each marked
+"Only available via our stockists"):
+Nutraflex · Nutracys+ · Nutraren · Nutramed · Nutramarin Advanced (Liver support) ·
+Nutramarin Advanced (Liver support chews) · Nutrabio Advanced (Daily digestive) ·
+Nutrabio Advanced (Rapid digestive). **Nutraquin Chews is OPEN-market** (confirmed not on the list).
 
 ### Guardrails (do NOT overclaim — the assessor may probe)
 - Do **not** assert a formally-named "RRP / margin-protection policy." Say truthfully: *"Nutravet doesn't

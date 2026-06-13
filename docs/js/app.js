@@ -25,6 +25,9 @@ const NAV = [
   { id:"roleplay",   label:"Role-play",           ic:"🎤", badge:true },
 ];
 
+function closeDrawer(){ const s=$(".sidebar"); const o=$("#navScrim"); if(s)s.classList.remove("open"); if(o)o.classList.remove("show"); }
+function toggleDrawer(){ const s=$(".sidebar"); const o=$("#navScrim"); const open=!s.classList.contains("open"); s.classList.toggle("open",open); o.classList.toggle("show",open); }
+
 function shell(){
   document.body.innerHTML = "";
   const app = el(`<div class="app"></div>`);
@@ -41,18 +44,24 @@ function shell(){
   const nav = $(".nav", app);
   NAV.forEach(n => {
     const b = el(`<button data-view="${n.id}"><span class="ic">${n.ic}</span>${n.label}${n.badge?`<span class="badge" data-badge="${n.id}"></span>`:""}</button>`);
-    b.addEventListener("click", () => go(n.id));
+    b.addEventListener("click", () => { go(n.id); closeDrawer(); });
     nav.appendChild(b);
   });
   app.appendChild(el(`
     <div class="main">
       <div class="topbar">
-        <div class="crumb" id="crumb"></div>
-        <div class="who"><span>Luke · Nutravet rep</span><span class="av">LR</span></div>
+        <div class="tb-left">
+          <button class="hamb" id="hamb" aria-label="Open menu">☰</button>
+          <div class="crumb" id="crumb"></div>
+        </div>
+        <div class="who"><span class="who-name">Luke · Nutravet rep</span><span class="av">LR</span></div>
       </div>
       <div class="content" id="content"></div>
     </div>`));
+  app.appendChild(el(`<div class="nav-scrim" id="navScrim"></div>`));
   document.body.appendChild(app);
+  $("#hamb", app).addEventListener("click", toggleDrawer);
+  $("#navScrim", app).addEventListener("click", closeDrawer);
   badges();
 }
 function badges(){
@@ -101,23 +110,16 @@ function viewExclusives(c){
   const e = EXCLUSIVES;
   c.appendChild(el(hero("learn","Stockist exclusives", "The range owners can't buy online", e.intro)));
 
+  c.appendChild(el(`<div class="card" style="border-left:4px solid var(--teal-500)"><h3>✅ Your proof</h3><div class="pitch">${e.proof}</div></div>`));
   c.appendChild(el(`<div class="card" style="border-left:4px solid var(--teal-500)"><h3>How to pitch it</h3>${ul(e.pitch)}</div>`));
 
-  const list = el(`<div class="card"><h3>Exclusive range</h3>
-    <div class="pill tag" style="margin-bottom:10px">⚠️ DRAFT, confirm before relying on it</div>
-    <p class="small muted" style="margin-top:0">${e.draftListNote}</p>
-    <table class="tbl"><thead><tr><th>Product</th><th>Category</th><th>Why it's flagged exclusive</th></tr></thead><tbody></tbody></table></div>`);
-  e.draftList.forEach(p => $("tbody", list).appendChild(el(`<tr><td><b>${p.name}</b></td><td class="k">${p.category}</td><td class="k">${p.note}</td></tr>`)));
+  const list = el(`<div class="card"><h3>The vet-exclusive range (${e.list.length} products)</h3>
+    <p class="small muted" style="margin-top:0">${e.source}</p>
+    <table class="tbl"><thead><tr><th>Product</th><th>Category</th><th>Tier</th></tr></thead><tbody></tbody></table></div>`);
+  e.list.forEach(p => $("tbody", list).appendChild(el(`<tr><td><b>${p.name}</b></td><td class="k">${p.category}</td><td class="k">${p.note}</td></tr>`)));
   c.appendChild(list);
 
-  c.appendChild(el(`<div class="card" style="border-left:4px solid var(--amber)">
-    <h3>🙋 Confirm with Luke</h3>
-    ${ul([
-      "Is this the real stockist-exclusive list, or which products should be added/removed?",
-      "Is Nutraquin Chews itself exclusive or open-market? (Assumed open here.)",
-      "Any exclusive-only pricing / margin worth quoting?"
-    ])}
-  </div>`));
+  c.appendChild(el(`<div class="card" style="border-left:4px solid var(--coral)"><h3>🚪 Where Nutraquin Chews fits</h3><div class="pitch">${e.nutraquinNote}</div></div>`));
 }
 
 /* ============================== COMPETITOR ============================== */

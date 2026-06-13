@@ -325,10 +325,25 @@ table.cmp tbody tr:hover td { background:var(--mint-50); }
 .lc-dot.problem { border:2px solid var(--teal-500); background:transparent; }
 .lc-dot.problem.on { background:var(--teal-600); }
 
+/* hamburger + off-canvas drawer (mobile). Hidden on desktop. */
+.tb-left { display:flex; align-items:center; gap:10px; min-width:0; }
+.hamb { display:none; background:transparent; border:0; font-size:22px; line-height:1; cursor:pointer; color:var(--ink); padding:6px 8px; border-radius:9px; }
+.hamb:hover { background:var(--mint-100); }
+.nav-scrim { display:none; position:fixed; inset:0; background:rgba(15,40,36,.45); z-index:45; }
+.nav-scrim.show { display:block; }
+
 @media (max-width:860px){
   .app { grid-template-columns:1fr; }
-  .sidebar { position:static; height:auto; }
-  .nav { flex-direction:row; flex-wrap:wrap; }
-  .nav .grp-label { width:100%; }
-  .content,.topbar { padding-left:18px; padding-right:18px; }
+  .hamb { display:inline-flex; align-items:center; justify-content:center; }
+  .topbar { position:sticky; top:0; z-index:20; }
+  .crumb { font-size:12.5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .who-name { display:none; }            /* keep just the avatar on small screens */
+  .content { padding-left:18px; padding-right:18px; }
+
+  .sidebar {
+    position:fixed; top:0; left:0; height:100dvh; width:268px; max-width:84vw;
+    z-index:50; transform:translateX(-100%); transition:transform .25s ease;
+    box-shadow:6px 0 28px rgba(15,40,36,.28); border-right:1px solid rgba(255,255,255,.08);
+  }
+  .sidebar.open { transform:translateX(0); }
 }

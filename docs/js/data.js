@@ -11,11 +11,11 @@
    practice's online-leakage frustration. Do NOT claim "Nutravet can't be bought
    online", that is false.
 
-   ⚠️ TO CONFIRM WITH LUKE:
-   - The authoritative list of stockist-exclusive products (draft below from the
-     catalogue's "Vet Select" badges + range video, NOT yet confirmed).
-   - Whether Nutraquin Chews itself is exclusive or open-market (assumed OPEN here,
-     it is badged "Recommended by vets", not "Vet Select").
+   ✅ CONFIRMED (from nutravet.co.uk shop, vet-exclusive filter, 2026-06):
+   - 8 vet/stockist-exclusive products (see EXCLUSIVES.list), each marked on the
+     site "Only available via our stockists".
+   - Nutraquin Chews is OPEN-market (not in the exclusive list), so it's the
+     door-opener; the exclusive range is the leakage fix.
    ============================================================================ */
 
 /* --------------------------- The corrected angle -------------------------- */
@@ -44,31 +44,38 @@ window.STRATEGY = {
   ],
   honestCaveats: [
     "Do NOT say 'Nutravet can't be bought online', it can. The angle is the EXCLUSIVE range, not the whole brand.",
-    "Until confirmed, don't claim Nutraquin Chews itself is exclusive, lead with it as the product + the exclusive-range access as the strategic win.",
+    "Nutraquin Chews is OPEN-market (confirmed not in the vet-exclusive list), so don't imply it can't be bought elsewhere. It's the door-opener; the exclusive range is the leakage fix.",
     "Respect YuMove (UK No.1 vet-recommended). Win on exclusivity & relationship, not by trashing it or out-claiming the science."
   ]
 };
 
-/* ------------------- Stockist-exclusive range (DRAFT) --------------------- */
+/* ------- Stockist-exclusive range (CONFIRMED from nutravet.co.uk shop) ----- */
 window.EXCLUSIVES = {
   intro:
-    "This is the heart of the pitch. As a Nutravet stockist the practice gets access to lines that owners can't " +
+    "This is the heart of the pitch. As a Nutravet stockist the practice gets access to lines owners cannot " +
     "buy online or in a supermarket, the direct answer to 'our clients just buy it online'.",
+  proof:
+    "On Nutravet's own shop these products show 'Only available via our stockists' with a 'Find a stockist' " +
+    "button and NO add-to-basket. That is your on-the-record proof of the exclusivity, an owner literally " +
+    "cannot buy them online.",
   pitch: [
     "'You're frustrated owners buy YuMove online. The fix is recommending lines they can only get from you.'",
-    "'As a Nutravet stockist you unlock our exclusive range, no Amazon, no supermarket shelf.'",
+    "'As a Nutravet stockist you unlock the exclusive range, no Amazon, no supermarket shelf, no online basket.'",
     "'Every recommendation on those lines is a sale that has to come back to your practice.'",
-    "'Nutraquin Chews is your easy way in, then you've got the exclusive range behind it.'"
+    "'Nutraquin Chews is your easy way in; the exclusive range is what protects your dispensing revenue.'"
   ],
-  draftListNote: "DRAFT, assembled from the catalogue's 'Vet Select' badges + range video. CONFIRM the real list with Luke before relying on it.",
-  draftList: [
-    { name: "Nutraflex", category: "Joint & mobility", note: "Catalogue 'Vet Select' badge" },
-    { name: "Nutracys+", category: "Urinary tract", note: "Catalogue 'Vet Select' badge" },
-    { name: "Nutraren", category: "Renal / kidney", note: "Catalogue 'Vet Select' badge" },
-    { name: "Nutramed (ageing pets)", category: "General / senior", note: "Catalogue 'Vet Select' badge" },
-    { name: "Nutrabio Advanced (paste)", category: "Digestive", note: "Range video: 'veterinary practice exclusive'" },
-    { name: "Nutrabio Advanced (powder)", category: "Digestive", note: "Range video: 'veterinary practice exclusive'" }
-  ]
+  source: "Confirmed from the nutravet.co.uk shop, vet-exclusive filter (8 products, each marked 'Only available via our stockists').",
+  list: [
+    { name: "Nutraflex", category: "Joint & mobility", note: "Veterinary strength" },
+    { name: "Nutracys+", category: "Urinary tract", note: "Veterinary strength" },
+    { name: "Nutraren", category: "Renal / kidney", note: "Veterinary strength" },
+    { name: "Nutramed", category: "General / ageing pets", note: "Multi-action veterinary strength" },
+    { name: "Nutramarin Advanced - Liver support", category: "Liver", note: "Advanced range" },
+    { name: "Nutramarin Advanced - Liver support chews", category: "Liver", note: "Advanced range" },
+    { name: "Nutrabio Advanced - Daily digestive support", category: "Digestive", note: "Advanced range" },
+    { name: "Nutrabio Advanced - Rapid digestive support", category: "Digestive", note: "Advanced range" }
+  ],
+  nutraquinNote: "Nutraquin Chews is NOT on this list, it's open-market. That's exactly why it's the door-opener: it gets you stocking Nutravet, and the exclusive range above is the strategic leakage fix."
 };
 
 /* ------------------------------ The competitor ---------------------------- */
@@ -100,7 +107,7 @@ window.COMPETITOR = {
   ],
   guardrails: [
     "Do NOT claim 'Nutravet can't be bought online', it can. The angle is the EXCLUSIVE range only.",
-    "Do NOT claim Nutraquin Chews is exclusive until confirmed, it may be an open-market line.",
+    "Nutraquin Chews is OPEN-market (not in the vet-exclusive list), don't imply owners can't buy it elsewhere.",
     "Do NOT claim Nutraquin Chews has 'more glucosamine' or is 'stronger' than YuMove, different formulation.",
     "Do NOT trash YuMove, respect the No.1 brand, then pivot to exclusivity and relationship."
   ]
